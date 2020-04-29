@@ -10,13 +10,20 @@ body {
   margin: 0 auto;
 }
 
+.button {
+  border: 2px dashed springgreen;
+  background: #fff;
+}
+.button__text {
+  color: darkgrey;
+}
+
 .promo {
   height: 300px;
   background-image: url("https://mate-academy.github.io/fe-program/assets/MA_top.jpg");
   background-size: cover;
   overflow: hidden;
 }
-
 .promo__content {
   display: flex;
   flex-direction: column;
@@ -25,6 +32,12 @@ body {
   height: 100%;
   text-align: center;
   color: #fff;
+}
+.promo__content--featured {
+  color: #ff0;
+}
+.promo__button {
+  margin-top: 50px;
 }
 
 .header {
@@ -44,11 +57,11 @@ body {
 }
 
 .nav__toggler-label::before {
-  content: '=';
+  content: "=";
 }
 
 .nav__toggler:checked ~ .nav__toggler-label::before {
-  content: 'x';
+  content: "x";
 }
 
 .nav__toggler {
@@ -58,10 +71,14 @@ body {
 .nav__list {
   display: flex;
   justify-content: space-between;
-
   margin: 0;
   padding: 0;
   list-style: none;
+}
+@media (max-width: 768px) {
+  .nav__list {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 768px) {
@@ -69,15 +86,10 @@ body {
     display: inline-block;
   }
 
-  .nav__list {
-    flex-direction: column;
-  }
-
   .nav__toggler:not(:checked) ~ .nav__list {
     display: none;
   }
 }
-
 .nav__link {
   display: inline-block;
   padding: 10px 5px;
@@ -85,8 +97,10 @@ body {
   color: #fff;
   text-decoration: none;
 }
-
 .nav__link:hover {
+  color: #1fc8db;
+}
+.nav__link--active {
   color: #1fc8db;
 }
 
@@ -104,11 +118,14 @@ body {
   background-image: url("https://mate-academy.github.io/fe-program/assets/MA_bottom.jpg");
   background-size: cover;
 }
-
 .footer__content {
   display: flex;
   justify-content: center;
   align-items: center;
-
   height: 100%;
 }
+.footer__button {
+  margin-right: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
